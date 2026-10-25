@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StockQuest | Learn to Trade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">StockQuest</h2>
+
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#market">Markets</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="../game-website/index.html">MindQuest Game</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="dashboard">
+        <p class="eyebrow">YOUR FINANCIAL LEARNING JOURNEY</p>
+
+        <h1>Learn the Market.<br>Master the Game.</h1>
+
+        <p>
+            Explore real company stocks, practise trading
+            with virtual points, and learn as you play.
+        </p>
+
+        <a class="primary-btn" href="#market">
+            Explore Markets
+        </a>
+    </header>
+
+    <main>
+
+        <section class="portfolio-summary" id="portfolio">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR ACCOUNT</p>
+                    <h2>Virtual Portfolio</h2>
+                </div>
+
+                <span class="demo-badge">PRACTICE MODE</span>
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <p>Available Points</p>
+                    <h3 id="balance">1,000</h3>
+                </div>
+
+                <div class="summary-card">
+                    <p>Invested Value</p>
+                    <h3 id="invested">0</h3>
+                </div>
+
+                <div class="summary-card">
+                    <p>Total Portfolio</p>
+                    <h3 id="totalValue">1,000</h3>
+                </div>
+
+                <div class="summary-card">
+                    <p>Profit / Loss</p>
+                    <h3 id="profitLoss">0</h3>
+                </div>
+
+            </div>
+
+            <p class="note">
+                Starting balance is a virtual practice amount.
+                It has no real-money value.
+            </p>
+        </section>
+
+        <section class="market-section" id="market">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE COMPANIES</p>
+                    <h2>Stock Market</h2>
+                </div>
+            </div>
+
+            <div class="market-tabs">
+                <button class="market-tab active" data-market="IN">
+                    Indian Stocks
+                </button>
+
+                <button class="market-tab" data-market="US">
+                    US Stocks
+                </button>
+            </div>
+
+            <div id="stockList" class="stock-grid">
+
+                <div class="stock-card">
+                    <h3>Loading stocks...</h3>
+                    <p>Stock information will appear here.</p>
+                </div>
+
+            </div>
+
+            <p class="note">
+                Stock prices shown in the first prototype will be
+                illustrative until a real market-data source is connected.
+            </p>
+
+        </section>
+
+        <section class="holdings-section">
+
+            <p class="eyebrow">YOUR TRADING ACTIVITY</p>
+            <h2>My Holdings</h2>
+
+            <div id="holdings">
+                <p>You haven't purchased any shares yet.</p>
+            </div>
+
+        </section>
+
+        <section class="rewards-section">
+
+            <div>
+                <p class="eyebrow">CONNECTED REWARDS</p>
+                <h2>Earn more with MindQuest</h2>
+
+                <p>
+                    Play games, earn XP, and unlock more
+                    virtual trading points.
+                </p>
+            </div>
+
+            <a class="secondary-btn"
+               href="../game-website/index.html">
+                Visit MindQuest
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            StockQuest is an educational simulator.
+            No real trades or investments are made.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

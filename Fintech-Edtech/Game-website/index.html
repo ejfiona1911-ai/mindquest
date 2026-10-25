@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindQuest | Memory Match</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="game-header">
+            <a class="brand" href="index.html">MIND<span>QUEST</span></a>
+            <div class="level-badge">LEVEL <span id="level">1</span></div>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">TRAIN YOUR BRAIN</p>
+            <h1>Memory <span>Match</span></h1>
+            <p class="subtitle">Find every matching pair before time runs out.</p>
+        </section>
+
+        <section class="stats" aria-label="Game statistics">
+            <div class="stat-card">
+                <span>TIME LEFT</span>
+                <strong id="timer">60s</strong>
+            </div>
+            <div class="stat-card">
+                <span>MATCHES</span>
+                <strong id="matches">0 / 4</strong>
+            </div>
+            <div class="stat-card">
+                <span>MISTAKES LEFT</span>
+                <strong id="mistakes">3</strong>
+            </div>
+            <div class="stat-card">
+                <span>YOUR XP</span>
+                <strong id="xp">0</strong>
+            </div>
+        </section>
+
+        <section class="game-panel">
+            <div class="panel-top">
+                <div>
+                    <h2>Find the pairs</h2>
+                    <p id="message" role="status" aria-live="polite">
+                        Flip two cards to begin!
+                    </p>
+                </div>
+                <button id="hintButton" class="outline-button" type="button">
+                    ✦ Hint (<span id="hints">0</span>)
+                </button>
+            </div>
+
+            <div id="gameBoard" class="game-board"
+                 aria-label="Memory matching cards"></div>
+
+            <div class="game-actions">
+                <button id="restartButton" class="secondary-button" type="button">
+                    ↻ Restart
+                </button>
+                <span id="progressText">Level 1 of 5</span>
+            </div>
+        </section>
+
+        <section class="wallet-strip">
+            <div>
+                <span class="wallet-label">MINDQUEST REWARDS</span>
+                <p>Complete levels to earn XP for your future StockQuest wallet.</p>
+            </div>
+            <div class="wallet-xp"><span id="totalXP">0</span> XP</div>
+        </section>
+    </main>
+
+    <div id="overlay" class="overlay" hidden>
+        <section class="result-card" role="dialog"
+                 aria-modal="true" aria-labelledby="resultTitle">
+            <div id="resultIcon" class="result-icon">✦</div>
+            <p class="eyebrow" id="resultEyebrow">LEVEL COMPLETE</p>
+            <h2 id="resultTitle">Brilliant!</h2>
+            <p id="resultMessage">You found every pair.</p>
+            <div id="resultActions" class="result-actions"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
